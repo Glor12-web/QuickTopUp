@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -17,6 +16,7 @@ import {
   Instagram,
   Linkedin,
 } from 'lucide-react';
+import StatsSection from "@/components/StatsSection";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -213,6 +213,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-300">
