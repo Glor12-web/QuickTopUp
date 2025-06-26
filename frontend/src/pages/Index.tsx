@@ -290,7 +290,7 @@ const Index = () => {
       {/* Stats Section */}
       <StatsSection />
         
-      {/*Digital Payment
+      {/*Digital Payment */}
       <section className="py-20 bg-white" id="services">
      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <h1 className="text-3xl font-bold pb-2 text-center">All Your Digital Payment in One Place</h1>
@@ -307,7 +307,7 @@ const Index = () => {
         bgColor={service.bgColor}/>
       ))}
     </div>
-      </section>   */}
+      </section>  
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-300">
