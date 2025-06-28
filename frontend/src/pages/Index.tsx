@@ -404,13 +404,13 @@ const Index = () => {
       </section>
 
       {/* stay updated */}
-      <section class="bg-blue-50 flex items-center justify-center min-h-screen">
-        <div class="text-center bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-          <div class="flex justify-center mb-4">
-            <div class="bg-blue-600 rounded-full p-3">
+      <section className ="bg-blue-50 flex items-center justify-center min-h-screen">
+        <div  className ="text-center bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+          <div  className ="flex justify-center mb-4">
+            <div  className ="bg-blue-600 rounded-full p-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-white"
+                 className ="h-6 w-6 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -425,27 +425,27 @@ const Index = () => {
             </div>
           </div>
 
-          <h2 class="text-2xl font-bold mb-2">Stay Updated</h2>
-          <p class="text-gray-600 mb-6">
+          <h2  className ="text-2xl font-bold mb-2">Stay Updated</h2>
+          <p  className ="text-gray-600 mb-6">
             Get the latest updates on new features, promotions, and industry
             insights delivered to your inbox.
           </p>
 
-          <form class="space-y-4">
+          <form  className ="space-y-4">
             <input
               type="email"
               placeholder="Enter your email address"
-              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               className ="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
               type="submit"
-              class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
+               className ="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
             >
               Subscribe to Newsletter
             </button>
           </form>
 
-          <p class="text-sm text-gray-500 mt-4">
+          <p  className ="text-sm text-gray-500 mt-4">
             No spam. Unsubscribe at any time.
           </p>
         </div>
