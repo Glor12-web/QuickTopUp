@@ -1,17 +1,16 @@
-
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import Logo from '@/components/ui/Logo';
-import DigitalPayment from '../components/DigitalPayment';
-import WhyChooseUs from '../components/whychooseus';
-import Testimonial from '../components/Testimonial';
-import Pricing from '../components/Pricing';
-import { 
-  Smartphone, 
-  Wifi, 
-  Zap, 
-  Monitor, 
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/Logo";
+import DigitalPayment from "../components/DigitalPayment";
+import WhyChooseUs from "../components/whychooseus";
+import Testimonial from "../components/Testimonial";
+import Pricing from "../components/Pricing";
+import {
+  Smartphone,
+  Wifi,
+  Zap,
+  Monitor,
   Star,
   ArrowRight,
   Menu,
@@ -22,7 +21,7 @@ import {
   Linkedin,
   GraduationCap,
   Shield,
-} from 'lucide-react';
+} from "lucide-react";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -32,108 +31,87 @@ const Index = () => {
       Icon: Smartphone,
       title: "Airtime & Data",
       description: "Instant airtime and data bundle purchases for all networks",
-      features: [
-        "All Networks",
-        "Instant delivery",
-        "Best Rates"
-      ],
+      features: ["All Networks", "Instant delivery", "Best Rates"],
       bgColor: "bg-blue-700",
     },
     {
       Icon: Zap,
       title: "Electric Bills",
       description: "Pay your bills from all major distribution companies.",
-      features: [
-        "All DISCOs",
-        "Instant Payment",
-        "Reciept Available"
-      ],
+      features: ["All DISCOs", "Instant Payment", "Reciept Available"],
       bgColor: "bg-yellow-500",
     },
     {
       Icon: Monitor,
       title: "Cable TV",
-      description: "Subscribe to  DSTV, GOTV, Startimes and other cable services.",
-      features: [
-        "All Provider",
-        "Auto-Renewal",
-        "Quick Setup"
-      ],
+      description:
+        "Subscribe to  DSTV, GOTV, Startimes and other cable services.",
+      features: ["All Provider", "Auto-Renewal", "Quick Setup"],
       bgColor: "bg-purple-700",
     },
     {
-      Icon:Wifi,
+      Icon: Wifi,
       title: "Internet Bills",
       description: "Pay For your Internet subscriptions from major ISPs",
-      features: [
-        "Major ISPs",
-        "Fast Processing",
-        "Reliable Service"
-      ],bgColor: "bg-blue-400",
+      features: ["Major ISPs", "Fast Processing", "Reliable Service"],
+      bgColor: "bg-blue-400",
     },
     {
       Icon: GraduationCap,
-      title:"Education",
+      title: "Education",
       description: "Pay for WEAC,JAMB,NECO and other educational services",
-      features: [
-        "All Boards",
-        "Secure Payment",
-        "Quick Processing"
-      ],
+      features: ["All Boards", "Secure Payment", "Quick Processing"],
       bgColor: "bg-green-500",
     },
     {
-    Icon: Shield,
-    title:"Secure & Fast",
-    description:"Bank-level security with instant transaction processing",
-    features:[
-      "256-bit SSL",
-      "PCL ComPliant",
-      "Instant Processing"
-    ],
-    bgColor: "bg-red-500",
+      Icon: Shield,
+      title: "Secure & Fast",
+      description: "Bank-level security with instant transaction processing",
+      features: ["256-bit SSL", "PCL ComPliant", "Instant Processing"],
+      bgColor: "bg-red-500",
     },
   ];
-  
-  const price=[{
-    title:"Basic",
-    subTitle:"Free",
-    description:"Perfect for getting started",
-    features:[
-      "Airtime & Data purchases",
-      "Basic bill payments",
-      "Standard Support",
-      "Transaction history",
-      "Mobile app access"
-    ],
-  },
-  {
-    title:"Premium",
-    subTitle:"₦500/Month",
-    description:"Best for regular users",
-    features:[
-      "All Basic feature",
-      "Priority Processing",
-      "Advance analytics",
-      "Api access",
-      "Bulk transactios",
-      "Customs notification"
-    ],
-  
-  },
-  {
-    title:"Business",
-    subTitle:"Custom",
-    description:"For businesses and enterprises",
-    features:[
-      "All Premium features",
-      "White-label solution",
-      "Dedication account manager",
-      "Custom integrations",
-      "Advanced reporting",
-      "Muti-user management"
-    ],
-  },]
+
+  const price = [
+    {
+      title: "Basic",
+      subTitle: "Free",
+      description: "Perfect for getting started",
+      features: [
+        "Airtime & Data purchases",
+        "Basic bill payments",
+        "Standard Support",
+        "Transaction history",
+        "Mobile app access",
+      ],
+    },
+    {
+      title: "Premium",
+      subTitle: "₦500/Month",
+      description: "Best for regular users",
+      features: [
+        "All Basic feature",
+        "Priority Processing",
+        "Advance analytics",
+        "Api access",
+        "Bulk transactios",
+        "Customs notification",
+      ],
+    },
+    {
+      title: "Business",
+      subTitle: "Custom",
+      description: "For businesses and enterprises",
+      features: [
+        "All Premium features",
+        "White-label solution",
+        "Dedication account manager",
+        "Custom integrations",
+        "Advanced reporting",
+        "Muti-user management",
+      ],
+    },
+  ];
 
   // Smooth scrolling for anchor links
   useEffect(() => {
@@ -142,25 +120,27 @@ const Index = () => {
       if (target.hash) {
         e.preventDefault();
         const element = document.querySelector(target.hash);
-        element?.scrollIntoView({ behavior: 'smooth' });
+        element?.scrollIntoView({ behavior: "smooth" });
         setIsMenuOpen(false);
       }
     };
 
     const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => link.addEventListener('click', handleSmoothScroll));
+    links.forEach((link) => link.addEventListener("click", handleSmoothScroll));
 
     return () => {
-      links.forEach(link => link.removeEventListener('click', handleSmoothScroll));
+      links.forEach((link) =>
+        link.removeEventListener("click", handleSmoothScroll)
+      );
     };
   }, []);
 
   const navItems = [
-    { href: '#services', label: 'Services' },
-    { href: '#features', label: 'Features' },
-    { href: '#why-choose-us', label: 'Why Us' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '#contact', label: 'Contact' },
+    { href: "#services", label: "Services" },
+    { href: "#features", label: "Features" },
+    { href: "#why-choose-us", label: "Why Us" },
+    { href: "#pricing", label: "Pricing" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -187,7 +167,10 @@ const Index = () => {
             {/* Auth Buttons */}
             <div className="hidden md:flex items-center gap-3">
               <Link to="/login">
-                <Button variant="ghost" className="text-slate-700 hover:text-primary-600">
+                <Button
+                  variant="ghost"
+                  className="text-slate-700 hover:text-primary-600"
+                >
                   Sign In
                 </Button>
               </Link>
@@ -205,7 +188,11 @@ const Index = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
 
@@ -251,24 +238,32 @@ const Index = () => {
                   Trusted by 50,000+ users
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                  Instant Top-ups & 
+                  Instant Top-ups &
                   <span className="text-primary-500 block">Bill Payments</span>
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed">
-                  Pay for airtime, data, electricity, cable TV, and more with lightning-fast transactions. 
-                  Your one-stop platform for all digital payments in Nigeria.
+                  Pay for airtime, data, electricity, cable TV, and more with
+                  lightning-fast transactions. Your one-stop platform for all
+                  digital payments in Nigeria.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/register">
-                  <Button size="lg" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 text-lg group">
+                  <Button
+                    size="lg"
+                    className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 text-lg group"
+                  >
                     Start Now - It's Free
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link to="/login">
-                  <Button size="lg" variant="outline" className="px-8 py-4 text-lg border-slate-300">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="px-8 py-4 text-lg border-slate-300"
+                  >
                     Sign In
                   </Button>
                 </Link>
@@ -280,7 +275,9 @@ const Index = () => {
                   <div className="text-sm text-slate-600">Uptime</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-slate-900">&lt;2s</div>
+                  <div className="text-3xl font-bold text-slate-900">
+                    &lt;2s
+                  </div>
                   <div className="text-sm text-slate-600">Transaction Time</div>
                 </div>
                 <div className="text-center">
@@ -293,29 +290,53 @@ const Index = () => {
             <div className="relative lg:animate-slide-up">
               <div className="relative z-10 bg-white rounded-3xl shadow-2xl p-8 max-w-md mx-auto">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Quick Actions</h3>
-                  <p className="text-slate-600">Choose a service to get started</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                    Quick Actions
+                  </h3>
+                  <p className="text-slate-600">
+                    Choose a service to get started
+                  </p>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <Link to="/register" className="bg-gradient-to-br from-primary-50 to-primary-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group">
+                  <Link
+                    to="/register"
+                    className="bg-gradient-to-br from-primary-50 to-primary-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group"
+                  >
                     <Smartphone className="h-6 w-6 text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                    <div className="text-sm font-medium text-slate-900">Airtime</div>
+                    <div className="text-sm font-medium text-slate-900">
+                      Airtime
+                    </div>
                   </Link>
-                  <Link to="/register" className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group">
+                  <Link
+                    to="/register"
+                    className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group"
+                  >
                     <Wifi className="h-6 w-6 text-blue-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                    <div className="text-sm font-medium text-slate-900">Data</div>
+                    <div className="text-sm font-medium text-slate-900">
+                      Data
+                    </div>
                   </Link>
-                  <Link to="/register" className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group">
+                  <Link
+                    to="/register"
+                    className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group"
+                  >
                     <Zap className="h-6 w-6 text-yellow-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                    <div className="text-sm font-medium text-slate-900">Electricity</div>
+                    <div className="text-sm font-medium text-slate-900">
+                      Electricity
+                    </div>
                   </Link>
-                  <Link to="/register" className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group">
+                  <Link
+                    to="/register"
+                    className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl text-center hover:shadow-md transition-all cursor-pointer group"
+                  >
                     <Monitor className="h-6 w-6 text-purple-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                    <div className="text-sm font-medium text-slate-900">Cable TV</div>
+                    <div className="text-sm font-medium text-slate-900">
+                      Cable TV
+                    </div>
                   </Link>
                 </div>
-                
+
                 <Link to="/register">
                   <Button className="w-full bg-primary-500 hover:bg-primary-600 text-white">
                     Get Started Now
@@ -327,63 +348,126 @@ const Index = () => {
           </div>
         </div>
       </section>
-        {/*Digital Payment */}
+      {/*Digital Payment */}
       <section className="py-20 bg-white" id="services">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold pb-2 text-center">All Your Digital Payment in One Place</h1>
-        <p className="text-center text-slate-900">From Mobile top to utility bills, we've got you covered with fast, secure, and reliable Payment solutions.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold pb-2 text-center">
+            All Your Digital Payment in One Place
+          </h1>
+          <p className="text-center text-slate-900">
+            From Mobile top to utility bills, we've got you covered with fast,
+            secure, and reliable Payment solutions.
+          </p>
         </div>
-         <div className="grid gap-3 md:grid-cols-3 sm:grid-cols-2 mt-10">
-         {services.map((service,index) => (
-       <DigitalPayment
-        key={index}
-        Icon={service.Icon}
-        title={service.title}
-        description={service.description}
-        features={service.features}
-        bgColor={service.bgColor}/>
-      ))}
-    </div>
-   </section>
+        <div className="grid gap-3 md:grid-cols-3 sm:grid-cols-2 mt-10">
+          {services.map((service, index) => (
+            <DigitalPayment
+              key={index}
+              Icon={service.Icon}
+              title={service.title}
+              description={service.description}
+              features={service.features}
+              bgColor={service.bgColor}
+            />
+          ))}
+        </div>
+      </section>
 
-    <WhyChooseUs />
-    <Testimonial />
-  
-    {/*Simple,Transparent Pricing */}
-    <section className="py-20 mx-12" id="pricing">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-center">Simple, Transparent Pricing</h1>
-        <p className="text-center pt-3 font-normal">No hidden fees. Pay only for what you use.</p>
-      </div>
-      
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-2 mt-10">
-        {price.map((item, index) => (
-          <Pricing
-            key={index}
-            title={item.title}
-            subTitle={item.subTitle}
-            description={item.description}
-            features={item.features}
-            btnColor={index === 1 ? "bg-blue-600" : "bg-black"}
-            label={index === 1 ? "Most Popular" : undefined}
-            border={index === 1 ? "border-4 border-blue-600" : "border"}
-          />
-        ))}
-      </div>
-    </section>
+      <WhyChooseUs />
+      <Testimonial />
 
-   {/* Footer */}
+      {/*Simple,Transparent Pricing */}
+      <section className="py-20 mx-12" id="pricing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-center">
+            Simple, Transparent Pricing
+          </h1>
+          <p className="text-center pt-3 font-normal">
+            No hidden fees. Pay only for what you use.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-2 mt-10">
+          {price.map((item, index) => (
+            <Pricing
+              key={index}
+              title={item.title}
+              subTitle={item.subTitle}
+              description={item.description}
+              features={item.features}
+              btnColor={index === 1 ? "bg-blue-600" : "bg-black"}
+              label={index === 1 ? "Most Popular" : undefined}
+              border={index === 1 ? "border-4 border-blue-600" : "border"}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* stay updated */}
+      <section class="bg-blue-50 flex items-center justify-center min-h-screen">
+        <div class="text-center bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+          <div class="flex justify-center mb-4">
+            <div class="bg-blue-600 rounded-full p-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold mb-2">Stay Updated</h2>
+          <p class="text-gray-600 mb-6">
+            Get the latest updates on new features, promotions, and industry
+            insights delivered to your inbox.
+          </p>
+
+          <form class="space-y-4">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
+            >
+              Subscribe to Newsletter
+            </button>
+          </form>
+
+          <p class="text-sm text-gray-500 mt-4">
+            No spam. Unsubscribe at any time.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
       <footer className="bg-slate-900 text-slate-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <Logo variant="light" />
               <p className="text-slate-400">
-                Nigeria's leading VTU platform for airtime, data, and bill payments. Fast, secure, and reliable.
+                Nigeria's leading VTU platform for airtime, data, and bill
+                payments. Fast, secure, and reliable.
               </p>
               <div className="flex gap-4">
                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                  <a key={index} href="#" className="w-10 h-10 bg-slate-800 hover:bg-primary-500 rounded-lg flex items-center justify-center group transition-colors">
+                  <a
+                    key={index}
+                    href="#"
+                    className="w-10 h-10 bg-slate-800 hover:bg-primary-500 rounded-lg flex items-center justify-center group transition-colors"
+                  >
                     <Icon className="h-5 w-5 text-slate-400 group-hover:text-white" />
                   </a>
                 ))}
@@ -393,32 +477,102 @@ const Index = () => {
             <div>
               <h4 className="font-semibold text-white mb-4">Services</h4>
               <div className="space-y-2">
-                <a href="#services" className="block hover:text-primary-400 transition-colors">Airtime & Data</a>
-                <a href="#services" className="block hover:text-primary-400 transition-colors">Electricity Bills</a>
-                <a href="#services" className="block hover:text-primary-400 transition-colors">Cable TV</a>
-                <a href="#services" className="block hover:text-primary-400 transition-colors">Internet Bills</a>
-                <a href="#services" className="block hover:text-primary-400 transition-colors">Education</a>
+                <a
+                  href="#services"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Airtime & Data
+                </a>
+                <a
+                  href="#services"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Electricity Bills
+                </a>
+                <a
+                  href="#services"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Cable TV
+                </a>
+                <a
+                  href="#services"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Internet Bills
+                </a>
+                <a
+                  href="#services"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Education
+                </a>
               </div>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-4">Company</h4>
               <div className="space-y-2">
-                <a href="#why-choose-us" className="block hover:text-primary-400 transition-colors">About Us</a>
-                <a href="#contact" className="block hover:text-primary-400 transition-colors">Contact</a>
-                <Link to="/support" className="block hover:text-primary-400 transition-colors">Support</Link>
-                <a href="#" className="block hover:text-primary-400 transition-colors">Careers</a>
-                <a href="#" className="block hover:text-primary-400 transition-colors">Blog</a>
+                <a
+                  href="#why-choose-us"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  About Us
+                </a>
+                <a
+                  href="#contact"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Contact
+                </a>
+                <Link
+                  to="/support"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Support
+                </Link>
+                <a
+                  href="#"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Careers
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Blog
+                </a>
               </div>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-4">Legal</h4>
               <div className="space-y-2">
-                <Link to="/privacy" className="block hover:text-primary-400 transition-colors">Privacy Policy</Link>
-                <Link to="/terms" className="block hover:text-primary-400 transition-colors">Terms of Service</Link>
-                <a href="#" className="block hover:text-primary-400 transition-colors">Security</a>
-                <a href="#" className="block hover:text-primary-400 transition-colors">Compliance</a>
+                <Link
+                  to="/privacy"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="/terms"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Terms of Service
+                </Link>
+                <a
+                  href="#"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Security
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-primary-400 transition-colors"
+                >
+                  Compliance
+                </a>
               </div>
             </div>
           </div>
